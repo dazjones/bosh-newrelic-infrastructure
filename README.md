@@ -9,7 +9,7 @@ addons:
     properties:
       newrelic:
         license_key: ((newrelic_license_key))
-    release: newrelic-infrastructure
+    release: bosh-newrelic-infrastructure
   name: bosh-newrelic-infrastructure
 releases:
 - name: bosh-newrelic-infrastructure
