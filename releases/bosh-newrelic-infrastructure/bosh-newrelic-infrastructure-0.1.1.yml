@@ -1,0 +1,15 @@
+name: bosh-newrelic-infrastructure
+version: 0.1.1
+commit_hash: 7d70d35
+uncommitted_changes: false
+jobs:
+- name: bosh-newrelic-infrastructure
+  version: a4b0160263b50c5f8251138ac4d08b812ff3bd3d
+  fingerprint: a4b0160263b50c5f8251138ac4d08b812ff3bd3d
+  sha1: f7a0e1b38cc018c2b9ccd15a90521f46effca0b5
+packages:
+- name: bosh-newrelic-infrastructure
+  version: 585a975a6829a32312f0d3ad18a6fc4cf115ddc0
+  fingerprint: 585a975a6829a32312f0d3ad18a6fc4cf115ddc0
+  sha1: 4c475d87d4a7e19bb1d3da486264a7db13cf1065
+  dependencies: []
