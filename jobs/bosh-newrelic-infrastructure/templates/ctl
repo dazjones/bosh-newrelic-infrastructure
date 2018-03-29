@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+set -ex
+
+case $1 in
+
+  start)
+		dpkg -x /var/vcap/packages/bosh-newrelic-infrastructure/*.deb /var/vcap/packages/bosh-newrelic-infrastructure/apt
+		export PATH="/var/vcap/packages/bosh-newrelic-infrastructure/apt/usr/bin:$PATH"
+		export LD_LIBRARY_PATH="/var/vcap/packages/bosh-newrelic-infrastructure/apt/usr/lib:$LD_LIBRARY_PATH"
+		export INCLUDE_PATH="/var/vcap/packages/bosh-newrelic-infrastructure/apt/usr/include:$INCLUDE_PATH"
+		export CPATH="$INCLUDE_PATH"
+		export CPPPATH="$INCLUDE_PATH"
+
+		newrelic-infra -config /var/vcap/jobs/bosh-newrelic-infrastructure/newrelic-infra.yml &
+
+		pidof newrelic-infra | cut -f 1 -d \ > /var/vcap/sys/run/bosh-newrelic-infrastructure/pid
+    ;;
+
+  stop)
+
+		kill -2 $(pidof newrelic-infra)
+    ;;
+
+  *)
+    echo "Usage: bosh-newrelic-infrastructure {start|stop}"
+
+    ;;
+
+esac

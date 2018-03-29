@@ -1,7 +1,7 @@
 ---
-name: newrelic-infra-bosh
+name: bosh-newrelic-infrastructure
 releases:
-- name: newrelic-infra-bosh
+- name: bosh-newrelic-infrastructure
   version: latest
 
 stemcells:
@@ -21,8 +21,8 @@ instance_groups:
   - z1
   instances: 1
   jobs:
-  - name: newrelic-infra-bosh
-    release: newrelic-infra-bosh
+  - name: bosh-newrelic-infrastructure
+    release: bosh-newrelic-infrastructure
   vm_type: default
   vm_extensions: [internet-required]
   persistent_disk_pool: 100GB

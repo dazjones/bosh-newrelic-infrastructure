@@ -1,12 +1,12 @@
 ---
-name: newrelic-infra-bosh
+name: bosh-newrelic-infrastructure
 
 templates:
   ctl: bin/ctl
   newrelic-infra.yml.erb: newrelic-infra.yml
 
-packages: 
-  - newrelic-infra-bosh
+packages:
+  - bosh-newrelic-infrastructure
 
 properties:
   newrelic_infra.license_key:

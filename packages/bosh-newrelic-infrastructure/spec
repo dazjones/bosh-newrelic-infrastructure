@@ -1,5 +1,5 @@
 ---
-name: newrelic-infra-bosh
+name: bosh-newrelic-infrastructure
 
 dependencies: []
 

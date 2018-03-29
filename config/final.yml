@@ -1,4 +1,4 @@
-name: newrelic-infra-bosh
+name: bosh-newrelic-infrastructure
 blobstore:
   provider: s3
   options:
